@@ -36,7 +36,6 @@ def create_app() -> FastAPI:
         return PutLink(link = f"https://{processed_link.link}")
 
     @app.exception_handler(Exception)
-    #$ fasdf
     async def global_exception_handler(request: Request, exc: Exception):
         error_data = {
             "timestamp": datetime.now().isoformat(),
